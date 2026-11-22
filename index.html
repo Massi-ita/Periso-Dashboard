@@ -1,37 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periso Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <h1>⚽ PERISO CF</h1>
-        <p>Dashboard Temporada 2026-2027</p>
-    </header>
-    <main class="container">
-        <section class="card highlight">
-            <h2>📅 Próximo Partido</h2>
-            <p id="next-match">Cargando próximo partido...</p>
-        </section>
-        <section class="grid">
-            <div class="card">
-                <h2>🏆 Clasificación</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Pos</th>
-                            <th>Equipo</th>
-                            <th>Puntos</th>
-                        </tr>
-                    </thead>
-                    <tbody id="standings">
-                    </tbody>
-                </table>
-            </div>
-            <div class="card">
-                <h2>👦 Diego De Gennaro</h2>
-      
+    <title>Periso Infantil A | Dashboard</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-content">
+
+            <img src="escudo.png" alt="Escudo Periso" class="logo">
+
+            <div>
+                <h1>PERISO INFANTIL A</h1>
+                <p>Temporada 2026-2027</p>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="card">
+                <h3>🏆 Clasificación</h3>
+                <div class="big-number">3º</div>
+                <p>20 puntos</p>
+            </div>
+
+            <div class="card">
+                <h3>📅 Próximo Partido</h3>
+                <p><strong>Periso CF</strong></p>
+                <p>vs</p>
+                <p><strong>Las Rozas CF</strong></p>
+                <p>Próximo fin de semana</p>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Racha</h3>
+                <div class="streak">
+                    ✅ ✅ ➖ ✅ ✅
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2>📊 Resumen de Temporada</h2>
+
+            <div class="summary-grid">
+
+                <div class="mini-card">
+                    <span>Partidos</span>
+                    <strong>10</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>Victorias</span>
+                    <strong>6</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>Empates</span>
+                    <strong>2</strong>
+                </div>
+
+                <div class="mini-card">
+                    <span>Derrotas</span>
+                    <strong>2</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2>📅 Próximos Partidos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Partido</th>
+                        <th>Lugar</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>29/11/2026</td>
+                        <td>Periso CF - Las Rozas</td>
+                        <td>Casa</td>
+                    </tr>
+
+                    <tr>
+                        <td>06/12/2026</td>
+                        <td>Canillas - Periso CF</td>
+                        <td>Fuera</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="section">
+
+            <h2>👦 Diego De Gennaro Serrano</h2>
+
+            <div class="player-card">
+
+                <div>
+                    <h3>Ficha del jugador</h3>
+
+                    <p><strong>Nombre:</strong> Diego De Gennaro Serrano</p>
+                    <p><strong>ID RFFM:</strong> 10913319</p>
+
+                    <a class="btn"
+                        href="https://www.rffm.es/fichajugador/10913319"
+                        target="_blank">
+                        Ver ficha RFFM
+                    </a>
+
+                </div>
+
+                <div class="player-stats">
+
+                    <div class="stat">
+                        <span>Partidos</span>
+                        <strong>10</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Goles</span>
+                        <strong>7</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Asistencias</span>
+                        <strong>4</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2>📈 Evolución de Diego</h2>
+
+            <canvas id="goalsChart"></canvas>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>ℹ️ Información</h2>
+
+            <p>
+                Dashboard privado para seguimiento del Periso Infantil A.
+            </p>
+
+            <p>
+                Datos preparados para futuras integraciones con la RFFM.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>Periso Infantil A | Dashboard by Massimiliano De Gennaro</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
