@@ -1,36 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    margin: 0;
-}
-header {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-.container {
-    padding: 20px;
-}
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.1);
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th {
-    background: #003366;
-    color: white;
-}
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-h2 {
-    margin-top: 0;
-}
+const ctx = document.getElementById('goalsChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+            'J1',
+            'J2',
+            'J3',
+            'J4',
+            'J5',
+            'J6',
+            'J7'
+        ],
+        datasets: [{
+            label: 'Goles de Diego',
+            data: [0, 1, 1, 2, 3, 5, 7],
+            borderWidth: 3,
+            tension: 0.35,
+            fill: true
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true
+            }
+        }
+    }
+});
